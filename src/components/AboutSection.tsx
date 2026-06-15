@@ -49,7 +49,7 @@ export default function AboutSection() {
               <div className="relative w-64 h-64">
                 <div className="absolute inset-0 hex-clip bg-gradient-to-br from-[#264653] to-[#2a9d8f]/40" />
                 <img
-                  src="/images/profile.jpg"
+                  src="/images/profile.png"
                   alt="Mohammad Javad Soltani"
                   className="hex-clip w-full h-full object-cover opacity-80"
                 />

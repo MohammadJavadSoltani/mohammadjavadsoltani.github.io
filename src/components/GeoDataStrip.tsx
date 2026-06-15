@@ -14,6 +14,8 @@ const dataPoints = [
 ];
 
 export default function GeoDataStrip() {
+  const repeatedPoints = Array(4).fill(dataPoints).flat();
+
   return (
     <div className="relative overflow-hidden py-4 px-4 sm:px-6 bg-[#080c10] border-y border-[#264653]/30">
       <motion.div
@@ -22,8 +24,8 @@ export default function GeoDataStrip() {
         className="flex gap-8 whitespace-nowrap"
         style={{ width: 'max-content' }}
       >
-        {[...dataPoints, ...dataPoints].map((dp, i) => (
-          <div key={i} className="flex items-center gap-3 px-4">
+        {repeatedPoints.map((dp, i) => (
+          <div key={i} className="flex-shrink-0 flex items-center gap-3 px-4">
             <div
               className="w-1.5 h-1.5 rounded-full animate-pulse"
               style={{ backgroundColor: dp.color }}
