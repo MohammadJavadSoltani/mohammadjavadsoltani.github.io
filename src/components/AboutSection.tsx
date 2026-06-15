@@ -10,6 +10,8 @@ const stats = [
   { label: 'Academic Rank', value: 1, suffix: 'st', decimals: 0, icon: Award, color: '#e76f51' },
 ];
 
+const profileImage = `${import.meta.env.BASE_URL}images/profile.png`;
+
 export default function AboutSection() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
@@ -49,7 +51,7 @@ export default function AboutSection() {
               <div className="relative w-64 h-64">
                 <div className="absolute inset-0 hex-clip bg-gradient-to-br from-[#264653] to-[#2a9d8f]/40" />
                 <img
-                  src="/images/profile.png"
+                  src={profileImage}
                   alt="Mohammad Javad Soltani"
                   className="hex-clip w-full h-full object-cover opacity-80"
                 />

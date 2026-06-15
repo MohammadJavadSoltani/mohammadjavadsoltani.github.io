@@ -5,6 +5,8 @@ import { ChevronDown, MapPin, Mail, Globe } from 'lucide-react';
 import RadarChart from './RadarViz';
 
 export default function HeroSection() {
+  const heroImage = `${import.meta.env.BASE_URL}images/hero-bg.jpg`;
+
   return (
     <section
       id="home"
@@ -14,7 +16,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(/images/hero-bg.jpg)',
+          backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'brightness(0.25)',
