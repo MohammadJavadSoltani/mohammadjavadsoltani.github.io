@@ -86,21 +86,21 @@ export default function AboutSection() {
               <span className="text-[#e9c46a]">Prof. H. Naghavi</span>.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              My research focuses on applying <strong className="text-white">Object-Based Image Analysis (OBIA)</strong>,
-              metaheuristic optimization algorithms, and machine learning to monitor agro-wetland and forest
+              My research focuses on <strong className="text-white">Environmental Engineering</strong>,
+              <strong className="text-white">Remote Sensing</strong>, and machine learning to monitor agro-wetland and forest
               ecosystems. I specialize in multi-decadal time-series analysis using platforms like{' '}
               <span className="text-[#2a9d8f]">Google Earth Engine</span>.
             </p>
             <p className="text-gray-400 leading-relaxed">
               My MSc thesis investigates{' '}
               <em className="text-gray-200">agricultural crop pattern changes and their effects on wetland degradation</em>{' '}
-              via time series and OBIA methodologies. Published in Q1 journals including{' '}
-              <span className="text-[#f4a261]">Remote Sensing Applications</span> and{' '}
+              via time series and OBIA methodologies. Published in ISI journals including{' '}
+              <span className="text-[#f4a261]">Remote Sensing Applications, Wetlands</span> and{' '}
               <span className="text-[#f4a261]">ISPRS Annals</span>.
             </p>
 
             {/* Education timeline */}
-            <div className="space-y-3 mt-6">
+            <div className="space-y-6 mt-6">
               {[
                 {
                   degree: 'MSc Remote Sensing & Photogrammetry',
@@ -142,35 +142,39 @@ export default function AboutSection() {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.6 + i * 0.1 }}
-              className="relative p-6 bg-[#0d1820] border border-[#264653]/40 rounded-sm text-center hud-corner card-hover"
-            >
-              <stat.icon size={24} className="mx-auto mb-3" style={{ color: stat.color }} />
-              <div className="font-orbitron text-3xl font-bold" style={{ color: stat.color }}>
-                {inView ? (
-                  <CountUp
-                    end={stat.value}
-                    decimals={stat.decimals}
-                    duration={2}
-                    delay={0.8 + i * 0.1}
-                  />
-                ) : '0'}
-                {stat.suffix}
-              </div>
-              <div className="font-mono-jet text-xs text-gray-500 mt-2 tracking-wider">
-                {stat.label}
-              </div>
-              <div
-                className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b"
-                style={{ background: `linear-gradient(90deg, transparent, ${stat.color}, transparent)` }}
-              />
-            </motion.div>
-          ))}
+          {stats.map((stat, i) => {
+            const Icon = stat.icon;
+
+            return (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.6 + i * 0.1 }}
+                className="relative p-6 bg-[#0d1820] border border-[#264653]/40 rounded-sm text-center hud-corner card-hover"
+              >
+                <Icon size={24} className="mx-auto mb-3" style={{ color: stat.color }} />
+                <div className="font-orbitron text-3xl font-bold" style={{ color: stat.color }}>
+                  {inView ? (
+                    <CountUp
+                      end={stat.value}
+                      decimals={stat.decimals}
+                      duration={2}
+                      delay={0.8 + i * 0.1}
+                    />
+                  ) : '0'}
+                  {stat.suffix}
+                </div>
+                <div className="font-mono-jet text-xs text-gray-500 mt-2 tracking-wider">
+                  {stat.label}
+                </div>
+                <div
+                  className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b"
+                  style={{ background: `linear-gradient(90deg, transparent, ${stat.color}, transparent)` }}
+                />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { ChevronDown, MapPin, Mail, Globe } from 'lucide-react';
@@ -139,10 +140,15 @@ export default function HeroSection() {
             <Globe size={14} className="text-[#e9c46a]" />
             ORCID: 0009-0007-7912-4661
           </a>
-          <span className="flex items-center gap-1">
+          <a
+            href="https://www.youtube.com/@geomatics_free8153"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 hover:text-[#2a9d8f] transition-colors"
+          >
             <span className="text-[#e76f51] text-xs">▶</span>
             YouTube
-          </span>
+          </a>
         </motion.div>
 
         {/* CTA Buttons */}
