@@ -15,7 +15,7 @@ const dataPoints = [
 
 export default function GeoDataStrip() {
   return (
-    <div className="relative overflow-hidden py-4 bg-[#080c10] border-y border-[#264653]/30">
+    <div className="relative overflow-hidden py-4 px-4 sm:px-6 bg-[#080c10] border-y border-[#264653]/30">
       <motion.div
         animate={{ x: ['0%', '-50%'] }}
         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}

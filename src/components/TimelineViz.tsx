@@ -41,7 +41,7 @@ export default function TimelineViz() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
-    <section className="py-16 px-6 bg-[#080c10]" ref={ref}>
+    <section className="py-20 px-6 sm:px-10 lg:px-16 bg-[#080c10]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

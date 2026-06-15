@@ -14,7 +14,7 @@ export default function AboutSection() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
-    <section id="about" className="relative py-28 px-6">
+    <section id="about" className="relative py-32 px-6 sm:px-10 lg:px-16">
       <div className="max-w-6xl mx-auto" ref={ref}>
         {/* Section header */}
         <motion.div

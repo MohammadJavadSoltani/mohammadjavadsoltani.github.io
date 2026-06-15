@@ -39,7 +39,7 @@ export default function WetlandMapViz() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
-    <section className="py-16 px-6" ref={ref}>
+    <section className="py-20 px-6 sm:px-10 lg:px-16" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -62,7 +62,7 @@ export default function ContactSection() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section id="contact" className="relative py-28 px-6 overflow-hidden">
+    <section id="contact" className="relative py-32 px-6 sm:px-10 lg:px-16 overflow-hidden">
       {/* Background matrix */}
       <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
 

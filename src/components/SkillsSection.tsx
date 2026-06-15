@@ -103,7 +103,7 @@ export default function SkillsSection() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section id="skills" className="relative py-28 px-6">
+    <section id="skills" className="relative py-32 px-6 sm:px-10 lg:px-16">
       <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto" ref={ref}>
