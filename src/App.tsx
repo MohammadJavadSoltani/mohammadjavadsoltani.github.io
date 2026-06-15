@@ -12,76 +12,73 @@ import ContactSection from './components/ContactSection';
 import SatelliteOrbit from './components/SatelliteOrbit';
 import GeoDataStrip from './components/GeoDataStrip';
 
-function App() {
+export default function App() {
   return (
     <div className="relative min-h-screen bg-[#0a0f14] text-white overflow-x-hidden">
-      {/* Global particle background */}
+      {/* Fixed particle background */}
       <ParticleField />
 
       {/* Navigation */}
       <Navbar />
 
-      {/* Main content */}
-      <main>
-        {/* Hero */}
+      {/* All sections stacked in a single scrollable flow */}
+      <main className="relative z-10">
+
+        {/* ── Hero ── */}
         <HeroSection />
 
-        {/* Orbital divider */}
-        <div className="flex items-center justify-center py-8 relative z-10">
-          <div className="flex-1 neon-line max-w-xs" />
-          <div className="mx-6">
+        {/* ── Orbital divider ── */}
+        <div className="flex items-center justify-center py-10">
+          <div className="flex-1 neon-line max-w-xs ml-6" />
+          <div className="mx-8">
             <SatelliteOrbit />
           </div>
-          <div className="flex-1 neon-line max-w-xs" />
+          <div className="flex-1 neon-line max-w-xs mr-6" />
         </div>
 
-        {/* About */}
+        {/* ── About ── */}
         <AboutSection />
 
-        {/* Neon divider */}
-        <div className="neon-line mx-auto max-w-4xl" />
+        {/* ── Geo ticker ── */}
+        <GeoDataStrip />
 
-        {/* Research Projects */}
+        {/* ── Research Projects ── */}
         <ResearchSection />
 
-        {/* Geo Data Strip */}
-        <GeoDataStrip />
+        {/* ── Neon divider ── */}
+        <div className="neon-line mx-auto max-w-4xl my-4" />
 
-        {/* Phenology Time Series Viz */}
+        {/* ── Phenology chart ── */}
         <TimelineViz />
 
-        {/* Neon divider */}
-        <div className="neon-line mx-auto max-w-4xl" />
+        {/* ── Neon divider ── */}
+        <div className="neon-line mx-auto max-w-4xl my-4" />
 
-        {/* Publications */}
+        {/* ── Publications ── */}
         <PublicationsSection />
 
-        {/* Wetland Map Visualization */}
+        {/* ── Wetland map viz ── */}
         <WetlandMapViz />
 
-        {/* Neon divider */}
-        <div className="neon-line mx-auto max-w-4xl" />
-
-        {/* Geo Data Strip 2 */}
+        {/* ── Geo ticker 2 ── */}
         <GeoDataStrip />
 
-        {/* Skills */}
+        {/* ── Skills ── */}
         <SkillsSection />
 
-        {/* Neon divider */}
-        <div className="neon-line mx-auto max-w-4xl" />
+        {/* ── Neon divider ── */}
+        <div className="neon-line mx-auto max-w-4xl my-4" />
 
-        {/* Experience */}
+        {/* ── Experience ── */}
         <ExperienceSection />
 
-        {/* Neon divider */}
-        <div className="neon-line mx-auto max-w-4xl" />
+        {/* ── Neon divider ── */}
+        <div className="neon-line mx-auto max-w-4xl my-4" />
 
-        {/* Contact */}
+        {/* ── Contact + Footer ── */}
         <ContactSection />
+
       </main>
     </div>
   );
 }
-
-export default App;
